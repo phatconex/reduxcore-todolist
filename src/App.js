@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import FilterToDo from "./component/FilterToDo/FilterToDo";
+import ListToDo from "./component/ListToDo/ListToDo";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    return (
+        <div
+            style={{
+                width: 500,
+                margin: "50px auto",
+                display: "flex",
+                flexDirection: "column",
+                backgroundColor: "white",
+                padding: 20,
+                boxShadow: "0 0 10px 4px #bfbfbf",
+                borderRadius: 5,
+            }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+            <h1>TODO APP with REDUX & ANTD</h1>
+            <FilterToDo></FilterToDo>
+            <ListToDo></ListToDo>
+        </div>
+    );
 }
 
 export default App;
